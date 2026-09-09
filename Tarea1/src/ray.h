@@ -19,6 +19,8 @@ class ray
         ray(const point3& origin, const vec3& direction) //:
         {
             //TODO
+            this->orig = origin;
+            this->dir = direction;
         }
 
         /**
@@ -27,6 +29,7 @@ class ray
         const point3& origin() const
         { 
             //TODO 
+            return orig;
         }
 
         /**
@@ -35,6 +38,7 @@ class ray
         const vec3& direction() const 
         { 
             //TODO
+            return dir;
         }
 
         /**
@@ -44,6 +48,7 @@ class ray
         point3 at(double t) const 
         {
             //TODO
+            return orig + (t * dir);
         }
 };
 
